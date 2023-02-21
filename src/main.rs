@@ -1,11 +1,9 @@
 use http_types::mime::JSON;
 use tide::{Request, Response};
-
 use serde_json;
 use std::collections::HashMap;
 use std::sync::Arc;
 use serde::{Serialize, Deserialize};
-
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Zip {
