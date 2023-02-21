@@ -39,7 +39,8 @@ COPY --from=builder /etc/group /etc/group
 WORKDIR /zips
 
 # Copy our build
-COPY --from=builder /zips/target/x86_64-unknown-linux-musl/release/zip ./
+COPY --from=builder /zips/target/x86_64-unknown-linux-musl/release/rust-hello ./zip
+COPY --from=builder /zips/zips.csv .
 
 # Use an unprivileged user.
 USER zip:zip
